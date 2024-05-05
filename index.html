@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mondrian Project</title>
+  <style>
+    /* 
+    Write your CSS here 
+    Gap Colour: #000
+    White: #F0F1EC
+    Red: #E72F24
+    Black: #232629
+    Blue: #004592
+    Yellow: #F9D01E
+    */
+    .flex-container{
+      display: flex;
+      height: 100vh;
+      justify-content: center;
+      align-items: center;
+    }
+    .grid-container{
+      display: grid;
+      gap: 9px;
+      grid-template-columns: 320px 419px;
+      grid-template-rows: 414px 324px;
+      background-color: #000;
+    }
+    .top-left{
+      background-color: #E72F24;
+    }
+    .top-right{
+      background-color: #F0F1EC;
+    }
+    .bottom-left{
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 20px;
+      gap : 9px;
+    }
+    .bottom-left div{
+      background-color: #F0F1EC;
+    }
+    .bottom-right{
+      display: grid;
+      grid-template-rows: 130px 155px 20px;
+      grid-template-columns: 360px 1fr;
+      gap:9px;
+    }
+    .bottom-right>div{
+      background-color: #F0F1EC;
+    }
+    .b1{
+      grid-row: span 2;
+    }
+    .b4{
+      grid-row-start: 2;
+      grid-row-end: 4;
+      grid-column-start: 2;
+      grid-column-end: -1;
+    }
+    .b2{
+      background-color: #004592;
+      margin-bottom: 10px;
+    }
+    .b5{
+      display: grid;
+      grid-template-columns: 198px 9px 153px;
+      grid-template-rows: 1fr;
+      
+    }
+    .b51{
+      background-color: #F9D01E ;
+    } 
+    .b52{
+      background-color: #232629;
+    }
+    .bgap{
+      background-color: #000;
+    }
+    
+
+  </style>
+</head>
+
+<body>
+  <div class="flex-container">
+    <div class="grid-container">
+      <div class="top-left"></div>
+      <div class="top-right"></div>
+      <div class="bottom-left">
+        <div class="bottom-left-up"></div>
+        <div class="bottom-left-down"></div>
+      </div>
+      <div class="bottom-right">
+        <div class="b1"></div>
+        <div class="b2" style="background-color: #004592;"></div>
+        <div class="b5">
+          <div class="b51"></div>
+          <div class="bgap"></div>
+          <div class="b52"></div>
+        </div>
+        <div class="b4"></div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
